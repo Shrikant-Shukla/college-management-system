@@ -1,4 +1,3 @@
-// src/pages/Teacher/TeacherDashboard.jsx
 import React, { useEffect, useState } from "react";
 import { auth, db } from "../../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -16,7 +15,6 @@ const TeacherDashboard = () => {
       const user = auth.currentUser;
       if (!user) return;
 
-      // Fetch teacher name
       const userDoc = await getDocs(
         query(collection(db, "users"), where("email", "==", user.email))
       );
@@ -27,7 +25,6 @@ const TeacherDashboard = () => {
 
       setTeacherName(name);
 
-      // Fetch courses assigned to this teacher
       const q = query(collection(db, "courses"), where("teacher", "==", name));
       const snapshot = await getDocs(q);
       const data = snapshot.docs.map((doc) => ({

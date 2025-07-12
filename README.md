@@ -113,26 +113,6 @@ npm run build
 firebase deploy
 ```
 
----
-
-## 📸 Screenshots
-
-- Login Page (Light & Dark Mode)
-  ![alt text](LoginPage.png)![alt text](LoginDarkMode.png)
-- Admin Dashboard (Courses, Users)
-  ![alt text](AdminScreenshot.png)![alt text](AdminCourseEnrollment.png) ![alt text](AdminCourseManagement.png) ![alt text](AdminNotesUpload.png)
-- Teacher Dashboard
-  ![alt text](TeacherScreenshot.png)
-- Student Dashboard
-  ![alt text](StudentEnrolledCourse.png)
-- Notes Upload/View
-  ![alt text](TeacherUploadNotes.png)
-  ![alt text](StudentNotesPage.png)
-- Firebase Console (for proof of integration)
-  ![alt text](firebaseConsole.png)
-
----
-
 ## 🛡️ Default Login Password
 
 - When Admin adds users, their default password is: `00000000`

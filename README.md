@@ -1,70 +1,162 @@
-# Getting Started with Create React App
+# 🎓 College Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully functional **College Management System** built with **React**, **Firebase Authentication**, **Firestore**, and **Role-Based Dashboards** for Admins, Teachers, and Students. It supports user management, course handling, enrollment, and notes sharing.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔗 Live Project
 
-### `npm start`
+**🌐 [View Live Deployment](https://college-management-syste-3e625.web.app)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> Hosted on Firebase Hosting
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🔐 **Authentication** (Login, Register) using Firebase Auth
+- 🧑‍🏫 **Role-based dashboards** for:
+  - **Admin**: Manage users, courses, notes, and enrollments
+  - **Teacher**: View assigned courses and upload/view notes
+  - **Student**: View enrolled courses and notes
+- 📚 **Course Management** by Admin
+- 📎 **Notes Upload/View** via public links (Google Drive, etc.)
+- 👥 **Student Enrollment** to Courses
+- 🌗 **Dark Mode** toggle (globally accessible)
+- 📦 **Cloud Firestore** for real-time database
+- 🔥 **Firebase Hosting** and GitHub Workflow ready
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Project Structure (Simplified)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+│
+├── components/
+│   ├── DarkModeToggle.jsx
+│   └── DarkModeToggle.css
+│
+├── context/
+│   └── ThemeContext.jsx
+│
+├── pages/
+│   ├── Admin/
+│   │   ├── CourseManagement.jsx
+│   │   └── NotesAdmin.jsx
+│   │
+│   ├── Student/
+│   │   ├── StudentDashboard.jsx
+│   │   └── StudentNotes.jsx
+│   │
+│   ├── Teacher/
+│   │   ├── TeacherDashboard.jsx
+│   │   └── TeacherNotes.jsx
+│   │
+│   ├── AdminDashboard.jsx
+│   ├── StudentEnrollment.jsx
+│   ├── Login.jsx
+│   ├── Register.jsx
+│   └── NotFound.jsx
+│
+├── routes/
+│   └── Router.jsx
+│
+├── App.jsx
+├── firebase.js
+└── index.js
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚙️ Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Frontend**: React
+- **Backend**: Firebase Firestore
+- **Authentication**: Firebase Auth
+- **Hosting**: Firebase Hosting
+- **CI/CD**: GitHub Actions (Workflow configured)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 1. Clone the repository
 
-## Learn More
+```bash
+git clone https://github.com/Shrikant-Shukla/college-management-system.git
+cd college-management-system
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. Install dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+### 3. Firebase Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Create a Firebase project at [firebase.google.com](https://firebase.google.com/)
+- Enable **Authentication**, **Firestore**, and **Hosting**
+- Replace your Firebase config in `firebase.js`
 
-### Analyzing the Bundle Size
+### 4. Start Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+### 5. Deploy to Firebase
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run build
+firebase deploy
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📸 Screenshots
 
-### Deployment
+- Login Page (Light & Dark Mode)
+  ![alt text](LoginPage.png)![alt text](LoginDarkMode.png)
+- Admin Dashboard (Courses, Users)
+  ![alt text](AdminScreenshot.png)![alt text](AdminCourseEnrollment.png) ![alt text](AdminCourseManagement.png) ![alt text](AdminNotesUpload.png)
+- Teacher Dashboard
+  ![alt text](TeacherScreenshot.png)
+- Student Dashboard
+  ![alt text](StudentEnrolledCourse.png)
+- Notes Upload/View
+  ![alt text](TeacherUploadNotes.png)
+  ![alt text](StudentNotesPage.png)
+- Firebase Console (for proof of integration)
+  ![alt text](firebaseConsole.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🛡️ Default Login Password
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- When Admin adds users, their default password is: `00000000`
+- To login as Admin use
+  Email: admin@college.com
+  Password: 00000000
+
+---
+
+## 📌 Notes
+
+- No Firebase Storage used — **notes are public links**
+- Minimal CSS framework; styling done via custom `App.css` and `DarkModeToggle.css`
+- Project works completely on **client-side Firebase SDK**; no backend server required
+
+---
+
+## 🙌 Acknowledgements
+
+- Built as part of a full-stack college project
+- Guided and tested in collaboration with OpenAI’s GPT-4o
+
+---
+
+## 🧠 License
+
+This project is open source and free to use under the MIT license.
